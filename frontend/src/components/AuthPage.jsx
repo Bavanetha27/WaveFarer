@@ -22,8 +22,8 @@ const AuthPage = () => {
     e.preventDefault();
     try {
       const response = isLogin
-        ? await axios.post('http://localhost:3000/login', { email, password })
-        : await axios.post('http://localhost:3000/signup', { name, email, password });
+        ? await axios.post('https://wavefarer-backend-api.onrender.com/login', { email, password })
+        : await axios.post('https://wavefarer-backend-api.onrender.com/signup', { name, email, password });
 
       if (isLogin) {
         login(response.data.user, response.data.token);
