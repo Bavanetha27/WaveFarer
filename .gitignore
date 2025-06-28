@@ -1,7 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*.pkl
 
 # Node modules
 node_modules/
@@ -13,10 +12,6 @@ node_modules/
 .env
 .env.*
 
-# Ignore specific JSON model mappings (optional)
-alert_mapping.json
-alert_to_safety_mapping.json
-model_columns.json
 
 # OS files
 .DS_Store
