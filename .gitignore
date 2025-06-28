@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pkl
+
+# Node modules
+node_modules/
+
+# VS Code settings (optional)
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Ignore specific JSON model mappings (optional)
+alert_mapping.json
+alert_to_safety_mapping.json
+model_columns.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs (if any)
+*.log
+
+# Python notebooks (optional)
+*.ipynb
+
+# Build and cache
+*.egg-info/
+dist/
+build/
+
+# NPM logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
