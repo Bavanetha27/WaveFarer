@@ -102,7 +102,7 @@ const Home = () => {
             };
 
             try {
-              const predictRes = await axios.post('https://weather-forecast-api-t1e5.onrender.com/api/predict', payload);
+              const predictRes = await axios.post('http://127.0.0.1:5001/api/predict', payload);
               const { alert_message,safety_message } = predictRes.data;
               setSafetyMessage(safety_message);
               setAlertMessage(alert_message);
@@ -146,7 +146,7 @@ const Home = () => {
   const closeFuture = () => setFuturePrediction(false);
   const openFuturePrediction = async () => {
     try {
-      const response = await fetch("https://weather-forecast-api-t1e5.onrender.com/api/future-predict", {
+      const response = await fetch("http://127.0.0.1:5001/api/future-predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

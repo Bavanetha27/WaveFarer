@@ -15,7 +15,7 @@ const UserProfile = () => {
     const token = localStorage.getItem("token");
 
     if (localUser?.email && token) {
-      fetch(`https://wavefarer-backend-api.onrender.com/get-user/${localUser.email}`)
+      fetch(`http://localhost:3000/get-user/${localUser.email}`)
         .then((res) => res.json())
         .then((data) => {
           const profile = {
@@ -55,7 +55,7 @@ const UserProfile = () => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`https://wavefarer-backend-api.onrender.com/update-profile/${tempUser.email}`, {
+      const response = await fetch(`http://localhost:3000/update-profile/${tempUser.email}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
