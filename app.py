@@ -9,15 +9,18 @@ import torch
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import os
+from dotenv import load_dotenv
 from models.weather_forecast_model import WeatherForecastModel
 
 from flask import Flask, request, jsonify
 from predict_weather import predict_weather_forecast  
 
+load_dotenv()
+
 app = Flask(__name__)
 CORS(app) 
 
-client = MongoClient(os.environ.get("MONGODB_URI", "mongodb+srv://wavefarer:wave@cluster0.cvpv8tc.mongodb.net/"))
+client = MongoClient(os.environ.get("MONGODB_URI"))
 db = client['test']
 collection = db['predictions']
 
